@@ -1,8 +1,10 @@
 .skills{
     display: flex;
+    flex-direction: column;
     padding-top: 20px;
     &__block{ 
         display: flex;
+        position: relative;
         height: 140px;
         max-width: 140px;
         justify-content: center;
@@ -19,4 +21,18 @@
         border: 2px solid #383737 ;
         border-radius: 16px;
     }
+
+    &__row{
+        display: flex;
+    }
+
+    &__textBlock{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
 }
