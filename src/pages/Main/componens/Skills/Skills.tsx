@@ -38,11 +38,11 @@ function Skills(){
             <img className="skills__img" src={logoFigma} alt="" />
             <p className="skills__textBlock">FIGMA</p> 
         </div>
-        <div className="skills__block"> 
+        <div className="skills__block "> 
             <img className="skills__img" src={logoJs} alt="" /> 
             <p className="skills__textBlock">JS</p> 
         </div>
-        <div className="skills__block"> 
+        <div className="skills__block "> 
             <img className="skills__img" src={logoTs} alt="" />
             <p className="skills__textBlock">TS</p>  
         </div>

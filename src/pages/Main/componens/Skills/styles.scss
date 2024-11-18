@@ -5,7 +5,6 @@
     &__container{
         display: flex;
         flex-direction: column;
-        align-items: start;
         width: 80%;
 
     }
@@ -19,13 +18,22 @@
         align-items: center;
         background: #272525 ;
         border-radius: 22px ;
-        margin-right: 10px;
+    }
+
+    &__block:hover{
+        height: 160px;
+        width: 160px;
+
+        img{
+            width: 75px;
+        }
+
     }
 
     &__img{ 
         padding: 0;
         margin: 0;
-        width: 60px;
+        width: 50px;
         border: 2px solid #383737 ;
         border-radius: 16px;
     }
@@ -33,6 +41,7 @@
     &__row{
         display: flex;
         margin-bottom: 10px;
+        justify-content: space-between;
     }
 
     &__textBlock{
