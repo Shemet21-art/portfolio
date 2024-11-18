@@ -14,6 +14,7 @@ import './styles.scss'
 function Skills(){ 
     return(
     <div className="skills ">
+        <div className="skills__container">
         <div className=" skills__row">
         <div className="skills__block"> 
             <img className="skills__img" src={logoHtml} alt="" /> 
@@ -54,8 +55,7 @@ function Skills(){
             <p className="skills__textBlock">React</p>  
         </div>
         </div>
-        
-        
+        </div>
     </div>
     )
     
