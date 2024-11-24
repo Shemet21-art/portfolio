@@ -1,41 +1,44 @@
 .skills{
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: background-color 0.5s ease; 
+    &__wrapperSwitch{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     &__container{
         display: flex;
         flex-direction: column;
         width: 80%;
-
     }
 
     &__block{ 
         display: flex;
         position: relative;
-        height: 140px;
-        width: 140px;
+        height: 100px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         background: #272525 ;
         border-radius: 22px ;
     }
 
-    &__block:hover{
-        height: 160px;
-        width: 160px;
-
-        img{
-            width: 75px;
-        }
-
+    &__block:hover &__img{
+      transform: scale(1.5);
     }
 
     &__img{ 
         padding: 0;
         margin: 0;
-        width: 50px;
+        width: 40px;
         border: 2px solid #383737 ;
-        border-radius: 16px;
+        border-radius: 12px;
     }
 
     &__row{
@@ -46,12 +49,88 @@
 
     &__textBlock{
         position: absolute;
-        
         bottom: 10px;
         left: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
     }
     
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #383737;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* Когда тумблер включен (темная тема) */
+input:checked + .slider {
+  background-color: white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #383737;
+}
+
+
+
+.slider-light {
+  background-color: #383737;
+}
+
+.slider-light:before {
+  background-color: #fff;
+}
+
+
+.light {
+    background-color: #ffffff;
+  }
+  
+  .dark {
+    background-color: #272525;
+  }
+
+  .darkText{
+    color: #272525;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .lightText{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
