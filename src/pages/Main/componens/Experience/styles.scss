@@ -1,0 +1,141 @@
+.experience{
+    display: flex;
+    &__leftBlock{
+        background: transparent;
+        max-width: 55%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+       padding: 20px;
+        border-radius: 14px;
+        transition:  0.5s ease; 
+       margin: 20px 0;
+      
+    }
+
+    &__education{
+        position: relative;
+        padding: 20px;
+        border-radius: 14px;
+        transition:  0.5s ease; 
+        height: max-content;
+        margin: 40px 20px;
+    }
+
+    &__hobbies{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition:  0.5s ease; 
+        padding: 20px;
+        border-radius: 14px;
+        margin-left: 10px;
+       height: max-content;
+    }
+}
+
+/* Падающие звезды */
+.falling-star {
+    position: absolute;
+    top: -5%;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    animation: falling 3s ease-out infinite;
+}
+
+/* Разные размеры для звёзд */
+.falling-star:nth-child(1) {
+    width: 7px;
+    height: 7px;
+}
+.falling-star:nth-child(2) {
+    width: 3px;
+    height: 3px;
+}
+.falling-star:nth-child(3) {
+    width: 5px;
+    height: 5px;
+}
+.falling-star:nth-child(4) {
+    width: 8px;
+    height: 8px;
+}
+.falling-star:nth-child(5) {
+    width: 4px;
+    height: 4px;
+}
+
+
+@keyframes falling {
+    0% {
+        top: 0;
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    }
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        top: 90%;
+        opacity: 0;
+        transform: scale(0.8);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+.sun {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffcc00, #ff9900);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.9);
+    z-index: -1;
+  }
+  
+  .sun-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240%;
+    height: 240%;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.6), transparent 60%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7);
+    animation: sun-rays 1.5s ease-in-out infinite;
+  }
+
+  
+  
+  @keyframes sun-rays {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+
+  .trans {
+    background-color: transparent;
+    color: #1a1a1a;
+  }
+  
+  .dark {
+    background: radial-gradient(circle, #0d0d0d, #1a1a1a, #2a2a2a);
+    color: white;
+  }

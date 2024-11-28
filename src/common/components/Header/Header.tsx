@@ -38,8 +38,8 @@ function Header(){
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Box sx={{ flexGrow: 0, display: { xs: 'none', sm: 'flex' }, justifyContent: 'space-between', width:"100%" }}>
-                {pages.map((page) => (
-                  <div className='btnWrapper'>
+                {pages.map((page, key) => (
+                  <div key={page} className='btnWrapper'>
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}

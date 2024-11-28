@@ -10,17 +10,17 @@ import logoReact  from "../../../../common/images/react.png"
 import logoBoots from "../../../../common/images/bootstrap.svg"
 
 import './styles.scss'
-import { useState } from "react"
+
+interface SkillsProps {
+    isToggled: boolean;
+    toggleHandler: () => void; // Функция для переключения состояния
+  }
 
 
-function Skills(){ 
 
-    const[isToggled, setIsToggled] = useState(false);
+function Skills({isToggled,toggleHandler}:SkillsProps){ 
 
-    const toggleHandler = () => {
-        setIsToggled(!isToggled)
-        console.log(isToggled)
-    }
+    
 
     return(
     <div className={`skills ${isToggled? 'dark' : 'light'}`}>
