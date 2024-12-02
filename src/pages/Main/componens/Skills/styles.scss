@@ -29,7 +29,7 @@
         border-radius: 22px ;
     }
 
-    &__block:hover &__img{
+    &__block:hover{
       transform: scale(1.5);
     }
 
@@ -43,7 +43,7 @@
 
     &__row{
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         justify-content: space-between;
     }
 
